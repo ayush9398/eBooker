@@ -1,3 +1,7 @@
+*{
+  /*background-color: white;*/
+  box-sizing: border-box;
+}
 html, body,{
     margin: 0px;
     padding: 0px;
@@ -5,6 +9,23 @@ html, body,{
     height: 100%;
 }
 /*@import url('https://fonts.googleapis.com/css?family=PT+Mono');*/
+#brand2{
+  width: 100%;
+  height: 200px;
+  color: white;
+  text-align: center;
+  font-size: 100px;
+  background-image: url(mybrand.jpg);
+  background-size: cover;
+  border:2px;
+  border-color: black;
+}
+#brand{
+  background-image: url(mybrand.jpg);
+  background-size: cover;
+}
+
+
 @media print {
     #scanner, #nav, #github-link {
         display: none;
@@ -24,17 +45,19 @@ html, body,{
         border: none !important;
     }
 }
+
 #scanner {
   z-index: 99999;
   width: 100%;
   height: 1px;
-  background-color: #00ff00;
-  position: fixed;
+  background-color: red;
+  position: relative;
   -webkit-animation-name: scanner;
   -webkit-animation-duration: 6s;
   -webkit-animation-iteration-count: infinite;
   animation-name: scanner;
   animation-duration: 3s;
+  height: 3px;
   animation-iteration-count: infinite;
 }
 @-webkit-keyframes scanner {
@@ -48,22 +71,29 @@ html, body,{
   100% {left: 0px; top: 0px;}
 }
 #nav {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 50px;
-  background-color: #000000;
-  color: #00ff00;
+  /*background-color: #000000;
+  color: #00ff00;*/
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  border-bottom: 5px black;
+  margin-bottom: 5px;
+
+}
+#test{
+  padding-top: 30px;
+  text-decoration: underline;
 }
 ul#nav li {
   float: left;
   display: block;
   text-align: center;
+  font-size: 25px;
   padding: 18px 16px 14px;
   text-decoration: none;
 }
@@ -85,12 +115,14 @@ ul#nav li#brand {
 }
 
 body {
-  background-color: #1f1f1f;
-  color: #00ff00;
-  font-family: "PT Mono", monospace;
+  background-color: #E9DEDC;
+  background-image: url(booker.jpg) ;
+  background-size: cover;
+  color: white;
+  font-family: helvetica, monospace;
 }
 a {
-  color: #00ff00;
+  color: red;
 }
 p {
   margin-bottom: 30px;
@@ -161,8 +193,9 @@ code {
 }
 h1, h2{
     text-align: center;
-    color: white;
-    font-family: monospace;
+    color: black;
+    text-decoration: underline;
+    font-family: helvetica;
 }
 #content a {
     color: #aa0000;
@@ -173,6 +206,14 @@ h1, h2{
 #content {
     font-size: 18px;
     max-width: 900px;
+    font-size: 25px;
     margin: auto;
     text-align: center;
+}
+ol{
+  list-style: none;
+  text-align: center;
+}
+#brand2{
+  border-color: black;
 }
